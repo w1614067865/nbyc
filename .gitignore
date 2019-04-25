@@ -124,4 +124,5 @@ dmypy.json
 *.idea/
 *.DS_Store
 *.__pycache__/
+Download/
 爬虫数据结构.md
