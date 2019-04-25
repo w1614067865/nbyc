@@ -7,7 +7,7 @@ from news.utils import get_config
 
 def run():
     # name = sys.argv[1]
-    name = 'gaoxinbendi'
+    name = 'gaoxinfagui'
     custom_settings = get_config(name)
     spider = custom_settings.get('spider')
     project_settings = get_project_settings()

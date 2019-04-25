@@ -121,4 +121,7 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+.idea/
+.DS_Store
+.__pycache__/
 爬虫数据结构.md

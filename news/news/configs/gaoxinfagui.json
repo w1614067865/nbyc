@@ -1,0 +1,38 @@
+{
+  "spider": "test2",
+  "website": "宁波高新法规发文",
+  "data": {"col": "1", "webid": "140", "path": "/", "columnid": "85224", "sourceContentType": "1", "unitid": "129165", "webname": "宁波国家高新区宁波新材料科技城", "permissiontype": "0"},
+  "type": "政策文件",
+  "settings": {
+    "USER_AGENT": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.90 Safari/537.36"
+  },
+  "url": "http://www.nbhtz.gov.cn/module/web/jpage/dataproxy.jsp?startrecord={0}&endrecord={1}&perpage=40",
+  "start_urls": ["http://www.nbhtz.gov.cn/module/web/jpage/dataproxy.jsp?startrecord=1&endrecord=120&perpage=40"],
+  "allowed_domains": ["www.nbhtz.gov.cn"],
+  "rules": "gaoxin_parse",
+  "item": {
+    "class": "NewsItem",
+    "loader": "NewsItemLoader",
+    "attrs": {
+      "title": [{"method": "css", "args": ["meta[name='ArticleTitle']::attr(content)"]}],
+      "_id": [{"method": "attr", "args": ["url"]}],
+      "content": [{"method": "css", "args": ["#zoom"]}],
+      "policytype": [{"method": "value", "args": ["4"]}],
+      "department": [{"method": "value", "args": ["14"]}],
+      "industry": [{"method": "value", "args": [""]}],
+      "time": [{"method": "css", "args": ["meta[name='PubDate']::attr(content)"], "re": "(\\d+-\\d+-\\d+)"}],
+      "releaseOrganization": [{"method": "value", "args": [""]}],
+      "province": [{"method": "value", "args": [""]}],
+      "citye": [{"method": "value", "args": [""]}],
+      "downtown": [{"method": "value", "args": [""]}],
+      "borough": [{"method": "value", "args": [""]}],
+      "lastupdate": [{"method": "value", "args": [""]}],
+      "newRecord": [{"method": "value", "args": [""]}],
+      "rsid": [{"method": "value", "args": [""]}],
+      "isMark": [{"method": "value", "args": [""]}],
+      "savetime": [{"method": "value", "args": [""]}],
+      "infoSource": [{"method": "value", "args": ["宁波高新法规发文"]}],
+      "file_urls": [{"method": "file:css", "args": ["#zoom a::attr(href)"], "re": "(.*?downfile.jsp.*$)"}]
+    }
+  }
+}
