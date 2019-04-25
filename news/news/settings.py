@@ -114,7 +114,7 @@ BLOOMFILTER_BIT = 30
 # redis持久化
 SCHEDULER_PERSIST = True
 # scrapy_redis or BoolFilter重爬
-SCHEDULER_FLUSH_ON_START = True
+# SCHEDULER_FLUSH_ON_START = True
 
 
 # 配置mongodb
