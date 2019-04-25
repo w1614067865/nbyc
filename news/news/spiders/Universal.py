@@ -7,7 +7,7 @@ from news.rules import *
 
 
 class NbhtzSpider(scrapy.Spider):
-    name = 'test2'
+    name = 'Universal'
 
     def __init__(self, name, *args, **kwargs):
         self.config = get_config(name)
